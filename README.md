@@ -1,6 +1,10 @@
-ghiraldi-plugin-registry
+ghiraldi-base-admin
 ========================
 
-The plugin registry allows for the registration of plugins into a central store and provides access to plugin
-properties for other controllers.  This is particularly useful for things like the admin core plugin, which
-uses the registry to build the admin views for controllers.
+This admin plugin is part of the ghiraldi base of plugins.  This adds the generic
+concept of an administrative section of a ghiraldi app.  The plugin by itself
+isn't necessarily useful, but is designed to serve as a base for other administrative
+plugins and functions. It defines the entry point into an admin interface and 
+basic access controls.
+
+Depends on ghiraldi-base-user and ghiraldi-base-role plugins.
