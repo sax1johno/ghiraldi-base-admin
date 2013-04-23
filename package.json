@@ -1,0 +1,35 @@
+{
+  "name": "ghiraldi-base-admin",
+  "description": "The",
+  "tags": [
+    "ghiraldi",
+    "base",
+    "admin"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "John O'Connor",
+    "email": "sax1johno@gmail.com"
+  },
+  "dependencies": {
+    "mongoose": "*",
+    "underscore": "*",
+    "nodeunit": "*",
+    "ghiraldi-base-user": "*",
+    "ghiraldi-base-role": "*"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/sax1johno/ghiraldi-base-admin.git"
+  },
+  "_id": "ghiraldi-base-admin@0.0.1",
+  "_from": "ghiraldi-base-admin@0.0.1",
+  "readme": "",
+  "dist": {
+    "shasum": "d954a7e75f43a819592271929dfd0bdb745436fd"
+  },
+  "ghiraldi": {
+      "name": "admin"
+  }
+}
