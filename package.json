@@ -6,7 +6,7 @@
     "base",
     "admin"
   ],
-  "version": "0.0.1",
+  "version": "0.0.10",
   "author": {
     "name": "John O'Connor",
     "email": "sax1johno@gmail.com"
@@ -23,8 +23,8 @@
     "type": "git",
     "url": "github.com/sax1johno/ghiraldi-base-admin.git"
   },
-  "_id": "ghiraldi-base-admin@0.0.1",
-  "_from": "ghiraldi-base-admin@0.0.1",
+  "_id": "ghiraldi-base-admin@0.0.10",
+  "_from": "ghiraldi-base-admin@0.0.10",
   "readme": "",
   "dist": {
     "shasum": "d954a7e75f43a819592271929dfd0bdb745436fd"
