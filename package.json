@@ -1,6 +1,6 @@
 {
   "name": "ghiraldi-base-admin",
-  "description": "The",
+  "description": "Part of the Ghiraldi framework set of base plugins, this plugin is used as the basis for administrative interfaces in a ghiraldi app.  By itself, it doesn't do much, but serves as a base for other administrative interfaces.",
   "tags": [
     "ghiraldi",
     "base",
