@@ -7,20 +7,23 @@
  **/
 var logger = require('ghiraldi-simple-logger'),
     plugins = require('ghiraldi-plugin-registry').registry,
-    roleMiddleware = require(plugins.get('role').getModule("/util/middleware")),
+    adminPlugin = plugins.get('admin'),
+    util = require('util');
+
+var roleMiddleware = require(plugins.get('role').getModule("/util/middleware")),
     jade = require('jade'),
     Q = require('q');
 
 var index = function(req, res){
     logger.log("trace", "This is the admin plugin");
-    res.send('/admin');
-    // res.render(plugins.get('admin').views['header'], {}, function(err, headerHTML) {
-    //     res.render(plugins.get('admin').views['footer'], {}, function(err, footerHTML) {
-    //         res.render(plugins.get('admin').views['index'], {}, function(err, indexHTML) {
-    //             res.send(headerHTML + footerHTML + indexHTML);
-    //         });
-    //     });
-    // });
+    adminPlugin.getView('header', {title: 'Ghiraldi'}, function(err, indexHtml) {
+        logger.log('trace', 'Should have rendered HTML: ' + indexHtml);
+        if (!err) {
+            res.send(indexHtml);
+        } else {
+            res.send(err);
+        }
+    });    
 };
 
 module.exports = {
@@ -31,7 +34,7 @@ module.exports = {
         verb: 'get',
         route: '/admin',
         middleware: [
-            roleMiddleware.restrictToAdmin
+            // roleMiddleware.restrictToAdmin
         ]
     }
   ]
